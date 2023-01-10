@@ -1,0 +1,86 @@
+{
+  "id": "f7ba75ac-07d1-4065-b4e6-84ec1a639828",
+  "version": "2.0",
+  "name": "devops-project",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "fc63eb4a-6cc0-468f-aada-eba0c5c9d9f2",
+    "name": "sanity test",
+    "commands": [{
+      "id": "ec5f0a30-72c5-47dc-ab67-8baf50e965a4",
+      "comment": "",
+      "command": "open",
+      "target": "/ShacharBenShimol-RazielAlron-OmerDavid-TamarBenHillel-OfirRabi/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b1253e16-6c6a-4b3b-9188-19cd5b5473d9",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5c007a99-c088-43f7-837e-62a6332ec50c",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=p",
+      "targets": [
+        ["css=p", "css:finder"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Count: 20')]", "xpath:innerText"]
+      ],
+      "value": "initValue"
+    }, {
+      "id": "bd628434-a27f-422a-ab1b-039bef25a586",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var a = ${initValue}.lastIndexOf(' '); return parseInt(${initValue}.substring(a, ${initValue}.length));",
+      "targets": [],
+      "value": "initNumber"
+    }, {
+      "id": "b7aba299-5812-4eb6-9391-908b143e3650",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${initNumber} + 1",
+      "targets": [],
+      "value": "nextNumber"
+    }, {
+      "id": "81ba7ffd-0100-4953-b4f2-46936dcaec3f",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@onclick='location.reload();']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Click me!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "65861bfb-6639-4fc6-b34a-f5c0dc959ab0",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=p",
+      "targets": [],
+      "value": "Count: ${nextNumber}"
+    }, {
+      "id": "eee4b590-00f2-4fdd-b437-6370c54de018",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=button",
+      "targets": [],
+      "value": "Click me!"
+    }]
+  }],
+  "suites": [{
+    "id": "c277f0a8-ea6b-40a4-b082-5d5a26976921",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["fc63eb4a-6cc0-468f-aada-eba0c5c9d9f2"]
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}
