@@ -14,6 +14,6 @@
 		session.setAttribute("count", count);
 	%>
 	<button onclick="location.reload();">Click me!</button>
-	<p>Count: <%= count %></p>
+	<p>Count1: <%= count %></p>
 </body>
 </html>
