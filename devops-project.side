@@ -21,6 +21,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "a21181d5-7c2e-4eb0-98fa-fe8b16c6f8ac",
+      "comment": "",
+      "command": "pause",
+      "target": "4000",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "5c007a99-c088-43f7-837e-62a6332ec50c",
       "comment": "",
       "command": "storeText",
@@ -71,6 +78,13 @@
       "target": "css=button",
       "targets": [],
       "value": "Click me!"
+    }, {
+      "id": "5d57a2bb-d5bc-407e-a937-bf0a2c7f0832",
+      "comment": "",
+      "command": "pause",
+      "target": "1500",
+      "targets": [],
+      "value": ""
     }]
   }],
   "suites": [{
