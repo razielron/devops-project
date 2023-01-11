@@ -13,7 +13,7 @@
 		count++;
 		session.setAttribute("count", count);
 	%>
-	<button onclick="location.reload();">Click me!</button>
+	<button onclick="location.reload();">Click me!!</button>
 	<p>Count: <%= count %></p>
 </body>
 </html>
