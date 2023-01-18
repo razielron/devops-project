@@ -47,7 +47,9 @@ public class DevopsRecordedSimulation extends Simulation {
 
 	setUp(
 		scn.injectOpen(
-			constantUsersPerSec(40).during(120)
+			rampUsersPerSec(1).to(40).during(10),
+			constantUsersPerSec(40).during(100),
+			rampUsersPerSec(40).to(1).during(10)
 		)
 	)
 	.protocols(httpProtocol);
